@@ -1,5 +1,6 @@
 function isValid(gamertag){
-    return false;
+    if(gamertag.length < 8) return false;
+    return true;
 }
 
 const isEmpty = (label) => !label || label.length === 0;

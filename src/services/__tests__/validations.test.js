@@ -17,10 +17,14 @@ describe("validations tests suites - isEmpty", () => {
     });
 });
 
-
 describe("validations tests suites - isValid", () => {
     test("should return false as the gamertag has less than 8 characters", () => {
         const result = isValid("gamerZ");
         expect(result).toBe(false);
+    });
+
+    test("should return true as the gamertag has more than 8 characters", () => {
+        const result = isValid("supergamerZ");
+        expect(result).toBe(true);
     });
 });
