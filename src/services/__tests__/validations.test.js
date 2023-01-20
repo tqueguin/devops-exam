@@ -24,7 +24,12 @@ describe("validations tests suites - isValid", () => {
     });
 
     test("should return true as the gamertag has more than 8 characters", () => {
-        const result = isValid("supergamerZ");
+        const result = isValid("supergamerZ@3");
         expect(result).toBe(true);
+    });
+
+    test("should return false as the gamertag doesn't have a special character", () => {
+        const result = isValid("supergamerZ8");
+        expect(result).toBe(false);
     });
 });
